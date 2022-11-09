@@ -95,22 +95,32 @@
                 <h3 class="h3 headingData mb-0" style="font-size: 2em;"><b>Add <span style="color: #319DA0;">Impressions</b></span></h3>
             </div>
             <div class="modal-body" style="color: #2E2E2E;">
-                <form action="{{ route('posts.store') }}" method="POST">
+                <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" maxlength="50">
-                        @error('title')
+                        {{-- @error('title')
                             <span class="text-danger">{{ $message }}</span>
-                        @enderror
+                        @enderror --}}
                     </div>
                     <div class="mb-3">
                         <label for="impressions" class="form-label">Impressions about this website</label>
                         <textarea class="form-control" name="impressions" id="impressions" cols="10" rows="5" maxlength="200"></textarea>
                         <div class="form-text" id="impressions_detail">Every thoughts you have is fine</div>
-                        @if ($errors->has('impressions'))
+                        {{-- @if ($errors->has('impressions'))
                             <span class="text-danger">{{ $errors->first('impressions') }}</span>
-                        @endif
+                        @endif --}}
+                    </div>
+
+                    {{-- <div class="mb-3">
+                        <input type="file" class="custom-file-input" id="input-file" name="picture">
+                        <label class="custom-file-label" for="input-file">Choose file</label>
+                    </div> --}}
+
+                    <div class="mb-3">
+                        <label for="input-file" class="form-label">Choose file</label>
+                        <input class="form-control" type="file" id="input-file" name="picture">
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="font-size: 1em;"><b>Add Data</b></button>
@@ -120,27 +130,5 @@
         </div>
     </div>
 </div>
-
-{{-- remove data --}}
-{{-- <div class="modal fade" tabindex="-1" id="deleteData">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="h3 headingData mb-0" style="font-size: 2em;"><b>Add <span style="color: #319DA0;">Impressions</b></span></h3>
-            </div>
-            <div class="modal-body" style="color: #2E2E2E;">
-                <form action="{{ route('posts.destroy',$posts->id) }}" method="POST" id="deleteData">
-                    @method('DELETE')
-                    {{ csrf_field() }}
-                    <input type="hidden" name="id" value="{{ $posts->id }}"> <br/>
-                    
-                    <button type="submit" class="btn btn-primary" style="font-size: 1em;"><b>Yes, Delete data!</b></button>
-                    <button type="button" class="btn btn-outline-secondary ms-2" style="font-size: 1em;" data-bs-dismiss="modal"><b>Not Yet!</b></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
 
 @endsection

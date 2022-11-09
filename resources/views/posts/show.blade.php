@@ -7,7 +7,10 @@
         <small>Date: {{$posts->created_at}}</small>
         <p>{{$posts->description}}</p>
 
+        <img src="{{asset('storage/posts_image/'.$posts->picture)}}">
+
         <a href="/posts/{{$posts->id}}/edit" class="btn btn-primary"><b>Edit</b></a>
+        <a href="/posts/{{$posts->id}}/resize" class="btn btn-primary"><b>Resize</b></a>
         <form action="{{ route('posts.destroy',$posts->id) }}" method="POST" id="deleteData">
             @method('DELETE')
             {{ csrf_field() }}

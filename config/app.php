@@ -212,4 +212,11 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    $provides => [
+        'Intervention\Image\ImageServiceProvider'
+    ],
+ 
+    $aliases => [
+        'ImageResize' => 'Intervention\Image\Facades\Image'
+    ]
 ];

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ResizeController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 
@@ -8,6 +9,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/send-email', [SendEmailController::class, 'index'])->name('kirim-email');
 Route::post('/post-email', [SendEmailController::class, 'store'])->name('post-email');
+Route::get('/resize-file', [App\Http\Controllers\PostController::class, 'index']);
+Route::post('/resize-file', [App\Http\Controllers\PostController::class, 'resizeImage'])->name('resizeImage');
 
 Route::get('/', function () {
     return view('welcome');

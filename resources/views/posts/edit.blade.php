@@ -23,9 +23,6 @@
         <input type="hidden" name="id" value="{{ $posts->id }}">
 
         <button type="submit" class="btn btn-primary"><b>Submit</b></button>
-        <script>
-            console.log(document.getElementById("test1").action);
-        </script>
     </form>
 </div>
 
