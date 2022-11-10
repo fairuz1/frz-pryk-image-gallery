@@ -25,6 +25,11 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ asset('/Views')}}" class="nav-link active">Home</a>
         </li>
+
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{ url('/gallery') }}" class="nav-link active">Galeries</a>
+        </li>
+
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{('/posts')}}" class="nav-link active">Impressions</a>
         </li>

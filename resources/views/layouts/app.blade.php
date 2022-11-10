@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('lte/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lte/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lightbox2/dist/css/lightbox.min.css') }}">
 
     {{-- @vite(['resources/js/app.js']) --}}
 
@@ -89,5 +90,6 @@
     <script src="{{ asset('lte/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('lte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('lte/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('lightbox2/dist/js/lightbox-plus-jquery.min.js') }}"></script>
 </body>
 </html>

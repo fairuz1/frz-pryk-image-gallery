@@ -49,3 +49,5 @@ Route::get('/send-email-non',function(){
     
     dd("Email Berhasil dikirim.");
 });
+
+Route::resource('gallery', 'App\Http\Controllers\GalleryController');
