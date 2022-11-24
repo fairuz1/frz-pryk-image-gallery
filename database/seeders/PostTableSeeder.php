@@ -16,7 +16,8 @@ class PostTableSeeder extends Seeder
             $data = [
                 'title' => 'Seeder ' . $i,
                 'description' => 'Seeder '. $i . ' description',
-                'created_at' => date("Y-m-d H:i:s")
+                'created_at' => date("Y-m-d H:i:s"),
+                'picture' => 'no images'
             ];
             DB::table('posts')->insert($data);
         }
