@@ -23,7 +23,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ asset('/Views')}}" class="nav-link active">Home</a>
+            <a href="{{ url('/Views')}}" class="nav-link active">Home</a>
         </li>
 
         <li class="nav-item d-none d-sm-inline-block">
@@ -31,7 +31,7 @@
         </li>
 
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{('/posts')}}" class="nav-link active">Impressions</a>
+            <a href="{{ url('/posts') }}" class="nav-link active">Impressions</a>
         </li>
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
