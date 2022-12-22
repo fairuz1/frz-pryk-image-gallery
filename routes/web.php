@@ -41,8 +41,8 @@ Route::resource('Views','App\Http\Controllers\ViewsController');
 
 Route::get('/send-email-non',function(){
     $data = [
-    'name' => 'Fairuz Akbar Azaria',
-    'body' => 'Testing Kirim Email'
+    'name' => 'Hello Fairuz Akbar Azaria!',
+    'body' => 'This email was sent from laravel project website.'
     ];
     
     Mail::to('fairuz.akbar.azaria@mail.ugm.ac.id')->send(new SendEmail($data));

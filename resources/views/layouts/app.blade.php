@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{ asset('lte/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lte/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('lightbox2/dist/css/lightbox.min.css') }}">
@@ -20,7 +21,7 @@
     <style>
         html { scroll-behavior: smooth; }
         * { padding: 0; margin: 0; font-family: 'Inter', sans-serif;}
-        body { background-color: snow; color: #2E2E2E;}
+        body { background-color: white; color: #111723;}
         img { height: 100%; width: 100%; }
         .sections { height: 100vh; }
         .nav-height { height: 10vh; }
@@ -72,7 +73,7 @@
     </style>
 </head>
 
-<body class="hold-transition sidebar-collapse">
+<body class="hold-transition sidebar-collapse" id="mainBody">
     @include('layouts.header')
     @include('layouts.sidebar')
     <div class="container">
