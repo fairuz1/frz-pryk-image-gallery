@@ -50,6 +50,10 @@ Route::get('/send-email-non',function(){
     dd("Email Berhasil dikirim.");
 });
 
+Route::get('/send-email',function(){
+    return view('kirim-email');
+});
+
 Route::resource('gallery', 'App\Http\Controllers\GalleryController');
 Route::get('/api/greet', 'App\Http\Controllers\GreetController@greet');
 Route::get('/api/gallery', 'App\Http\Controllers\GreetController@gallery');

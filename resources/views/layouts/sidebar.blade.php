@@ -91,8 +91,8 @@
     <!-- username -->
     <div class="profile-container pb-3 m-3">
         <img class="img-fluid profile-image pl-4 pr-4 pt-4 mb-3 mx-auto d-block" src="{{ asset('icons/user_icon.svg') }}">
-        <p class="pl-4 pr-4 mb-0 mx-auto d-block profile-text">{{ Auth::user()->name }}</p>
-        <span class="pl-4 pr-4 mb-3 profile-subtext">{{ Auth::user()->email }}</span>
+        <p class="pl-4 pr-4 mb-0 mx-auto d-block profile-text">user</p>
+        <span class="pl-4 pr-4 mb-3 profile-subtext">email</span>
     </div>
 
     <div class="nav flex-column nav-pills mt-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
