@@ -1,7 +1,48 @@
 @extends('layouts.app')
 @section('content')
+<style>
+    .alert {
+        background: var(--primaryLightBlue);
+        box-shadow: 0px 4px 20px -1px var(--secondaryLightBlue);
+        border-radius: 20px;
+        border: none;
+        color: var(--calmBlack);
+    }
 
-<div class="alert alert-primary alert-dismissible fade show login-alert" role="alert">
+    .buttonPrimary {
+        background: var(--calmBlack);
+        box-shadow: 0px 4px 20px -1px var(--lightPurple);
+        border-radius: 10px;
+        color: var(--primaryLightBlue);
+
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    .buttonPrimary:hover {
+        background: var(--primaryLightBlue);
+        box-shadow: 0px 4px 20px -1px var(--lightPurple);
+        border-radius: 10px;
+        color: var(--calmBlack);
+        border-color: var(--calmBlack);
+
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    table {
+        background: rgba(251, 252, 253, 0.6);
+        box-shadow: 0px 4px 20px var(--lightPurple) !important;
+        border-radius: 20px !important;
+    }
+
+
+
+
+    
+</style>
+
+<div class="alert alert-primary alert-dismissible fade show login-alert p-4" role="alert">
     @if (session('status'))
         <div class="alert alert-primary" role="alert">
             {{ session('status') }}
@@ -12,9 +53,6 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <!-- 
-        bootstrap v.5.0
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
 </div>
 
 <div class="modal fade" tabindex="-1" id="addWebpages">
@@ -23,7 +61,7 @@
             <div class="modal-header">
                 <h3 class="h3 headingData mb-0" style="font-size: 2em;"><b>Add your <span style="color: #319DA0;">Web Pages</b></span></h3>
             </div>
-            <div class="modal-body" style="color: #2E2E2E;">
+            <div class="modal-body">
                 <form action="{{ route('Views.store') }}" method="POST">
                     {{ csrf_field() }}
                     <div class="mb-3">
@@ -55,11 +93,11 @@
             from controller with the help of model.
         </p>
         <div class="mb-3">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWebpages"><b>Add Webpages</b></button>
+            <button type="button" class="btn buttonPrimary p-3" data-toggle="modal" data-target="#addWebpages">Add Webpages</button>
         </div>
         <table class="table caption-top table-bordered table-hover text-center mt-2">
             <caption>List of preveously routed pages that has been moved to controller</caption>
-            <thead>
+            <thead style="background: var(--primaryLightBlue);">
                 <tr>
                     <th scope="col">Date Created</th>
                     <th scope="col">Available web pages</th>
@@ -76,7 +114,7 @@
                 @else
                     <tr>
                         <th scope="row"></th>
-                        <td colspan="3"> Noting to be shown!</td>
+                        <td colspan="3"> Nothing to be shown!</td>
                     </tr>
                 @endif
             </tbody>

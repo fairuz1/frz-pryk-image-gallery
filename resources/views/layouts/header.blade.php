@@ -6,7 +6,7 @@
 </style>
 
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-light">
+<nav class="main-header navbar navbar-expand navbar-light mt-2" id="mainNavbarId">
      <!-- Authentication Links -->
      @guest
         <ul class="navbar-nav">
@@ -22,12 +22,12 @@
             </li>
         @endif
         </ul>
-    
     @else
+
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ url('/Views')}}" class="nav-link active">Home</a>
+            <a href="{{ url('/Views') }}" class="nav-link active">Home</a>
         </li>
 
         <li class="nav-item d-none d-sm-inline-block">
